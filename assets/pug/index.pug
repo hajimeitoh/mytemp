@@ -1,0 +1,25 @@
+extends module/_layout
+
+block vars
+  //- ページid
+  - var pageid = 'index'
+
+block topslider
+    div.topslider#topslider
+      ul.slide-list.main-gallery
+        each item in topslide
+          li.gallery-cell
+            a( href = item.url )
+              img( src = item.imagepath )
+              div.gallery-cell-content
+                span.head= item.title
+
+
+block contents
+  //- ページ本体
+  div.row
+    div.col-sm-4.col-xs-12
+      include module/_sidemenu
+    div.col-sm-8.col-xs-12
+      section.section
+        h1= page.title

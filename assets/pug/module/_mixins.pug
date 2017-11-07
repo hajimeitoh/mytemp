@@ -1,0 +1,27 @@
+//- ベースmeta用
+mixin metabase
+  - if( page.description !== '' )
+    meta(name = 'description', content = page.description)
+  - if( page.keywords !== '' )
+    meta(name = 'keywords', content = page.keywords)
+  - if( site.author !== '' )
+    meta(name = 'author', content = site.author)
+
+//- meta-og用
+mixin metaog
+  meta(property = 'og:title', content = page.title)
+  meta(property = 'og:type', content = 'website')
+  meta(property = 'og:url', content = site.url_base)
+  meta(property = 'og:image', content = site.url_base + '/og_image.png')
+  meta(property = 'og:site_name', content = site.name)
+  meta(property = 'og:description', content = page.description)
+
+//- scriptタグ一括出力
+mixin scripts(list)
+  each i in list
+    script(src = i)
+
+//- linkタグ一括出力
+mixin csss(list)
+  each i in list
+    link(rel = 'stylesheet', href = i)

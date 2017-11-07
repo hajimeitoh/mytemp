@@ -1,0 +1,52 @@
+{
+  "site": {
+    "name": "Sample Site",
+    "url_base": "http://sample.com/",
+    "author": "authoer name",
+    "copy": {
+      "name": "sample org",
+      "year": 2017
+    },
+    "common_css": [
+      "/css/reset.min.css",
+      "/css/font-awesome.min.css",
+      "/css/bootstrap.min.css",
+      "/css/common.css"
+    ],
+    "common_script": [
+      "/js/jquery-3.2.1.min.js",
+      "/js/bootstrap.min.js"
+    ],
+    "pages": {
+      "index": {
+        "title": "ホーム",
+        "description": "このページはトップページです。",
+        "keywords": "",
+        "css": [
+          "/css/flickity.min.css",
+          "/css/index.css"
+        ],
+        "script": [
+          "/js/flickity.min.js",
+          "/js/index.js"
+        ]
+      },
+      "concept": {
+        "title": "コンセプト",
+        "description": "このページはコンセプトページです。",
+        "keywords": "",
+        "css": [
+          "/css/concept.css"
+        ],
+        "script": [
+          "/js/concept.js"
+        ]
+      }
+    }
+  },
+  "info": {
+    "tel": "04512345678",
+    "email": "abc.edf.com",
+    "address": "○○○市□□□区×××町1-2-3"
+  }
+}

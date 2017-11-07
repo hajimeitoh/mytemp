@@ -1,0 +1,51 @@
+/* index */
+@import 'nib'
+@import 'module/_base'
+/* ---------------------
+// スライダーのカスタマイズ
+--------------------- */
+.topslider
+  width 100%
+  .slide-list
+    width 100%
+    .gallery-cell
+      width 100%
+      & > a
+        position relative
+        display block
+        width 100%
+        height 100%
+        img
+          display block
+          absolute top left bottom right
+          width 100%
+          height 100%
+          z-index 1
+        .gallery-cell-content
+          display block
+          absolute top left bottom right
+          width 100%
+          height 100%
+          z-index 2
+          display flex
+          flex-direction column
+          flex-wrap nowrap
+          justify-content center
+          align-items center
+          .head
+            color $basewhitecolor
+            font-size 2rem
+  .flickity-prev-next-button
+    @media screen and (max-width: 767px)
+      width 22px
+      height @width
+  .flickity-page-dots
+    bottom 4px
+    .dot
+      background-color #fffa
+      width 30px
+      border-radius 5px
+      margin 0 4px
+      opacity 1
+      &.is-selected
+        background-color #000a
