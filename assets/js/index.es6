@@ -1,7 +1,7 @@
 class pageview{
   constructor() {
     this.slideAllWidth = 1600;
-    this.slideWidth = 1200;
+    this.slideWidth = 1600;
     this.slideHeight = 300;
     return this;
   };
@@ -46,7 +46,7 @@ class pageview{
       resize: true,
       autoPlay: 6000
     });
-    $(window).on('resize', ()=>{
+    $(window).on('resize', () => {
       let
         ww = that.$topslider.width(),
         wh = ww / slideRatio,

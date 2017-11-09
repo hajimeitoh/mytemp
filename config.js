@@ -86,6 +86,10 @@ module.exports = {
           to: dist + 'css'
         },
         {
+          from: assets + 'fonts/**/*.*',
+          to: dist + 'fonts'
+        },
+        {
           from: assets + 'js/**/*.js',
           to: dist + 'js'
         },

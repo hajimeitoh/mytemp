@@ -17,6 +17,7 @@ $navbgcolorLight = #BEE1EF;
 $navcolor = #fff;
 $navcolorDark = #2D5663;
 
+$subcolor = #2d5663;
 
 $mainbgcolor = #333;
 $maincolor = #ccc;
@@ -48,11 +49,25 @@ $noticecolor = #c88;
 $noticecolor_light = lighten( $noticecolor, 20% );
 $noticecolor_dark = darken( $noticecolor, 20% )
 
+$sectioncolor = #88c
+$sectioncolor_light = lighten( $sectioncolor, 20% )
+$sectioncolor_dark = darken( $sectioncolor, 20% )
 
 /*
- * grid
+ * grid, breakpoint
  */
+// コンテンツの差最大幅
 $maxWidth = 900px;
+// SPの幅
+$screen-sm = 768px;
+breakpoint(bpName)
+  for name in bpName
+    if name == 'sm'
+      @media only screen and (max-width: ( $screen-sm - 1 ) px )
+        {block}
+    if name == 'md'
+      @media only screen and (max-width: ( $maxWidth - 1 ) px )
+        {block}
 
 /*
  * font

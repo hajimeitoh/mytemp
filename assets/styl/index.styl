@@ -5,7 +5,13 @@
 // スライダーのカスタマイズ
 --------------------- */
 .topslider
+  position relative
   width 100%
+  .slidefixed
+    absolute top 10px right 10px
+    z-index 3
+    li
+      display inline-block
   .slide-list
     width 100%
     .gallery-cell
@@ -36,7 +42,7 @@
             color $basewhitecolor
             font-size 2rem
   .flickity-prev-next-button
-    @media screen and (max-width: 767px)
+    +breakpoint(sm)
       width 22px
       height @width
   .flickity-page-dots
@@ -49,3 +55,87 @@
       opacity 1
       &.is-selected
         background-color #000a
+.shareSnsTop
+  &-button
+    display: block
+    .fa
+      font-size 2rem
+      padding 3px
+      width 1.3em
+      height 1.3em
+      text-align center
+      display: block
+      border-radius 0.65em
+      overflow hidden
+      opacity .75
+      &:hover
+        opacity 1
+
+/* banner */
+.aside-banner
+  .banner
+    &-item
+      display block
+      margin 10px 10px 0
+      & > a
+        display block
+        overflow hidden
+        border-radius 10px
+        position relative
+        & > img
+          display block
+          width 100%
+          height auto
+        .head
+          absolute bottom left right
+          z-index 1
+          background-color rgba( $_base_black, .75 )
+          color $_base_white
+          padding 4px 8px
+          font-size 1.4rem
+          text-align center
+
+/* news */
+.section-news
+  .section-head
+    color $_base_white
+    font-size 1.6rem
+    background-color $sectioncolor
+    overflow hidden
+    border-radius 1.4rem
+    & >.fa
+      display: inline-block
+      background-color: $_base_white
+      color $sectioncolor
+      font-size 1.4rem
+      line-height 1.6rem
+      width 1.6rem
+      border-radius (@line-height / 2) rem
+      text-align center
+      margin .6rem
+      vertical-align: .1rem
+  .news
+    margin 10px
+    &-item
+      &-head
+        font-size 1.6rem
+        font-weight bold
+        border-bottom 1px solid #000
+        display flex
+        flex-direction row
+        flex-wrap nowrap
+        justify-content space-between
+        align-items flex-end
+        time
+          font-size 1rem
+          font-weight normal
+      & + ^[-2..-1]
+        margin-top 5px
+      &:not(:first-child)
+        margin-top 10px
+      &-detail
+        padding 0 5px
+        font-size 1.2rem
+        p
+          padding-top 5px
+          line-height 1.4

@@ -15,5 +15,56 @@
       "url": "/",
       "imagepath": "/img/index/img_slide03.jpg"
     }
+  ],
+  "banner": [
+    {
+      "title": "banner-01",
+      "url": "/",
+      "imagepath": "/img/index/img_bn01.jpg"
+    },
+    {
+      "title": "banner-02",
+      "url": "/",
+      "imagepath": "/img/index/img_bn02.jpg"
+    },
+    {
+      "title": "banner-03",
+      "url": "/",
+      "imagepath": "/img/index/img_bn03.jpg"
+    }
+  ],
+  "news": [
+    {
+      "title": "Iure facilis, culpa.",
+      "date": "2017/10/12",
+      "detail": [
+        "Molestias iure accusantium aspernatur, aliquam laboriosam voluptate laudantium reprehenderit, qui nisi tempora quidem quos animi nam modi corporis quibusdam fuga expedita itaque quas hic optio, ipsum illo! Animi, minus, impedit!",
+        "Impedit voluptates iusto cum illo quos architecto, distinctio temporibus. Quo, quos, unde. Facilis culpa eum voluptates saepe aliquid quo ipsum rem ex quidem ab! Eius tempora deserunt exercitationem, molestias dolore!"
+      ]
+    },
+    {
+      "title": "Eligendi, minus, deleniti!",
+      "date": "2017/08/24",
+      "detail": [
+        "Quis reprehenderit dolore at aliquam nostrum dignissimos repellendus tenetur enim sed earum mollitia, accusantium necessitatibus nesciunt ad quaerat soluta. Cumque recusandae repellat dolorem tempore commodi sit similique consequuntur voluptas iusto!",
+        "Voluptate soluta dolore sapiente doloribus dicta earum sit sint officiis praesentium qui animi, harum eligendi eos facere. Fugiat molestiae aperiam soluta provident culpa, voluptate voluptas fugit nisi iusto, cum, nam!"
+      ]
+    },
+    {
+      "title": "Perferendis, eligendi, enim.",
+      "date": "2017/08/10",
+      "detail": [
+        "Minima veritatis, rerum. Magnam quo, et tempore quos eius recusandae sequi, sapiente modi, quae minus commodi esse laboriosam id omnis laborum cumque, repudiandae natus doloribus nemo nulla molestias. Dolorem, repudiandae?",
+        "Illo, libero, nemo. Veniam facere laboriosam deserunt suscipit fugiat quidem distinctio quo inventore pariatur aspernatur dolores temporibus error modi, nulla molestiae dicta maiores fugit, et iste. Sunt fugit est ratione!"
+      ]
+    },
+    {
+      "title": "Reiciendis quis, incidunt?",
+      "date": "2017/06/28",
+      "detail": [
+        "Nobis error, quo, deleniti distinctio mollitia ipsam, ipsum quis harum ut ea vel ab numquam esse facere consequatur eius dolor unde perferendis inventore, perspiciatis aperiam. Perspiciatis est ullam, blanditiis iusto.",
+        "Ea, assumenda eligendi sint rerum minus impedit excepturi aut odit totam mollitia velit vero quo suscipit id modi error molestiae distinctio ipsa, repellat! Quis eum totam cupiditate laborum magni sed."
+      ]
+    }
   ]
 }

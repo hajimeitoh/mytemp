@@ -2,11 +2,11 @@
 
 doctype html
 
-include _dammy_images
-include _mixins
-
 block vars
 - var page = site.pages[pageid]
+
+include _dammy_images
+include _mixins
 
 html(lang='ja')
   head
@@ -26,7 +26,9 @@ html(lang='ja')
       include _header
       - if( pageid === 'index' )
         block topslider
-      include _nav
+        include _nav
+      - else
+        include _nav
       main.main.container-fluid( id = pageid )
         div.widthFit
           block contents

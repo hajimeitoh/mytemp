@@ -24,7 +24,7 @@ const host = {
 gulp.task('server', () => {
   gulp.src(__CONFIG.dist)
     .pipe($.webserver({
-      host: host.local,
+      host: host.ip,
       port: 8000,
       livereload: true,
       fallback: __CONFIG.path.dist + 'index.html',

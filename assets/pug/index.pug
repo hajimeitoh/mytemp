@@ -6,6 +6,18 @@ block vars
 
 block topslider
     div.topslider#topslider
+      ul.slidefixed.shareSnsTop
+        li
+          a.shareSnsTop-button( href = tw_href )
+            span.fa.fa-twitter
+            span.sr-only
+              | twitter
+        li
+          a.shareSnsTop-button( onclick = fb_onclick, href = fb_href )
+            span.fa.fa-facebook
+            span.sr-only
+              | facebook
+
       ul.slide-list.main-gallery
         each item in topslide
           li.gallery-cell
@@ -18,8 +30,27 @@ block topslider
 block contents
   //- ページ本体
   div.row
-    div.col-sm-4.col-xs-12
+    div.col-sm-4.col-xs-12.contents-side
       include module/_sidemenu
-    div.col-sm-8.col-xs-12
-      section.section
-        h1= page.title
+      aside.aside.aside-banner
+        ul.banner
+          each item in banner
+            li.banner-item
+              a( href = item.url )
+                img( src = item.imagepath )
+                span.head= item.title
+
+    div.col-sm-8.col-xs-12.contents-main
+      section.section.section-news
+        h2.section-head
+          i.fa.fa-info
+          | お知らせ
+        ul.news
+          each item in news
+            li.news-item
+              h3.news-item-head
+                | !{item.title}
+                +date(item.date,'jp',true)
+              div.news-item-detail
+                each str in item.detail
+                  p= str

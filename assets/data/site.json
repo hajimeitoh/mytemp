@@ -1,8 +1,9 @@
 {
   "site": {
     "name": "Sample Site",
-    "url_base": "http://sample.com/",
+    "host": "http://sample.com/",
     "author": "authoer name",
+    "description": "このサイトはサンプルサイトです。",
     "copy": {
       "name": "sample org",
       "year": 2017
@@ -15,7 +16,8 @@
     ],
     "common_script": [
       "/js/jquery-3.2.1.min.js",
-      "/js/bootstrap.min.js"
+      "/js/bootstrap.min.js",
+      "/js/common.js"
     ],
     "pages": {
       "index": {
@@ -37,9 +39,6 @@
         "keywords": "",
         "css": [
           "/css/concept.css"
-        ],
-        "script": [
-          "/js/concept.js"
         ]
       }
     }
@@ -48,5 +47,9 @@
     "tel": "04512345678",
     "email": "abc.edf.com",
     "address": "○○○市□□□区×××町1-2-3"
+  },
+  "fb": {
+    "appid": "012345678901234",
+    "imagepath": "/img/fb.jpg"
   }
 }

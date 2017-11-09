@@ -7,8 +7,18 @@ block vars
 block contents
   //- ページ本体
   div.row
-    div.col-sm-4.col-xs-12
-      include module/_sidemenu
-    div.col-sm-8.col-xs-12
+    div.col-sm-4.col-xs-12.contents-side
+      div.affix-top#afNav
+        include module/_sidemenu
+    div.col-sm-8.col-xs-12.contents-main
       section.section
-        h1= page.title
+        div.body
+          each val, key in pparagraph
+            div.theme
+              h2.title !{key}
+              each val2, key2 in val
+                - if( key2 === 'img' )
+                  figure.image
+                    img.img-responsive( src = val2, alt = '' )
+                - else
+                  p.detail= val2

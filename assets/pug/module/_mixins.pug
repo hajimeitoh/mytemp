@@ -11,8 +11,8 @@ mixin metabase
 mixin metaog
   meta(property = 'og:title', content = page.title)
   meta(property = 'og:type', content = 'website')
-  meta(property = 'og:url', content = site.url_base)
-  meta(property = 'og:image', content = site.url_base + '/og_image.png')
+  meta(property = 'og:url', content = site.host)
+  meta(property = 'og:image', content = site.host + '/og_image.png')
   meta(property = 'og:site_name', content = site.name)
   meta(property = 'og:description', content = page.description)
 
@@ -25,3 +25,49 @@ mixin scripts(list)
 mixin csss(list)
   each i in list
     link(rel = 'stylesheet', href = i)
+
+//- Convert YYYY-MM-DD date into human readable format as time element
+    Usage: +date("2016-09-06")
+    date - [string] date in YYYY-MM-DD format
+mixin date( input, lang = 'en', week = false )
+  -
+    var
+      date = new Date(input),
+      months = {
+        // en: [ 'Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec' ],
+        en: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
+        // jp: [ '一月' '二月' '三月' '四月' '五月' '六月' '七月' '八月' '九月' '十月' '十一月' '十二月' ]
+        jp: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ]
+      },
+      days = {
+        // en: [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
+        en: [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+        // jp: [ '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日', '日曜日' ]
+        jp: [ '月', '火', '水', '木', '金', '土', '日' ]
+      }
+      dateStr = ( lang === 'en' )
+        ? months.en[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear()
+        : date.getFullYear() + '年' + months.jp[date.getMonth()] + '月' + date.getDate() + '日';
+    if( week )
+      dateStr += ( lang === 'en' )
+        ? ' ' + days.en[date.getDay()]
+        : '（' + days.jp[date.getDay()] + '）';
+  time( datetime = JSON.parse( JSON.stringify(date) ) )&attributes(attributes)= dateStr
+
+
+
+//- sns share url
+-
+  var
+    tw_href =
+      'https://twitter.com/intent/tweet?original_referer=' +
+      site.host + '&amp;text=' + site.name + '：' + site.description + '&amp;host=' +
+      site.host,
+    fb_onclick = 'window.open(this.href, \'FBwindow\', \'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes\'); return false;',
+    fb_href = 'https://www.facebook.com/dialog/feed?' +
+      'app_id=' + fb.appid +
+      '&amp;caption=' + site.description +
+      '&amp;picture=' + site.host + fb.imagepath +
+      '&amp;display=popup&amp;name=' + site.name +
+      '&amp;link=' + site.host +
+      '&amp;redirect_uri=' + site.host;

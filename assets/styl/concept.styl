@@ -1,0 +1,29 @@
+/* index */
+@import 'nib'
+@import 'module/_base'
+.section
+  .body
+    .theme
+      & > .title
+        font-size 2rem
+        display block
+        color $maincolor_dark2
+        padding 10px 10px 0
+        text-align: center
+        &:not(:first-child)
+          margin-top 10px
+      & > .detail
+        font-size 1.4rem
+        line-height 1.5
+        margin 10px 10px 0
+      & > .image
+          margin 10px auto
+          text-align center
+          +breakpoint(sm)
+            margin 10px -10px
+          img
+            display inline-block
+            max-width 400px
+            width 100%
+      & + &
+        margin-top 10px
