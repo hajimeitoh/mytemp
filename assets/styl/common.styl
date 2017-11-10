@@ -2,7 +2,18 @@
 @import 'module/_base'
 @import 'module/_reset'
 
-/* common */
+/*
+ * common
+-*/
+a
+  color getcolor( "base", "light", "link" )
+  &:hover
+    color getcolor( "base", "light", "active" )
+html, body
+  background-color $white
+  font-feature-settings "palt"
+  font-family 'Lato', 'Noto Sans JP', sans-serif
+
 .widthFit
   max-width $maxWidth
   width 100%
@@ -12,13 +23,6 @@
 h1, h2, h3, a
   font-size inherit
 
-a
-  color $linkcolor_light
-  &:hover
-    color darken(@color, 20%)
-html, body
-  background-color $outbgcolor
-  font-feature-settings "palt"
 
 .main.container-fluid
   margin-top 15px
@@ -29,11 +33,11 @@ html, body
 /* SNS */
 .fa
   &.fa-twitter
-    background-color: #1da1f3
-    color $_base_white
+    background-color: $tw_bgcolor
+    color $white
   &.fa-facebook
-    background-color: #3b5998
-    color $_base_white
+    background-color: $fb_bgcolor
+    color $white
 
 
 /* footer */
@@ -42,8 +46,8 @@ html, body
   bottom 0
   width 100%
   box-sizing border-box
-  background-color $navbgcolor
-  color $_base_white
+  background-color getcolor( "base", "dark", "bgcolor" )
+  color getcolor( "base", "dark", "color" )
   padding 10px
   text-align right
   font-size 1.2rem
@@ -51,8 +55,10 @@ html, body
   +breakpoint(sm)
     margin-top 0
     text-align center
-  small
+  p
     font-size 1.2rem
+    small
+      font-size 1.2rem
 
 /* side-contents */
 .contents-side
@@ -63,22 +69,23 @@ html, body
     border-radius 5px
     text-align center
     overflow hidden
-    border 1px solid  $subcolor
+    border 1px solid getcolor( "sub", "dark", "bgcolor" )
     a:not(.btn)
-      color $subcolor
+      color getcolor( "sub", "dark", "bgcolor" )
     .head
       font-size 1.6rem
+      font-weight 900
       line-height 2.8rem
       padding 0 5px
-      background-color $subcolor
-      color $_base_white
+      background-color getcolor( "sub", "dark", "bgcolor" )
+      color getcolor( "sub", "dark", "color" )
     .detail
       padding 0
       margin 16px 8px 8px
       dt
         display none
       dd
-        color: $subcolor;
+        color getcolor( "sub", "dark", "bgcolor" )
         font-size: 1.3rem;
 
 #afNav

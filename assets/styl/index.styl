@@ -1,9 +1,9 @@
-/* index */
+/*
+ * index
+ */
 @import 'nib'
 @import 'module/_base'
-/* ---------------------
-// スライダーのカスタマイズ
---------------------- */
+/* top slider */
 .topslider
   position relative
   width 100%
@@ -39,7 +39,7 @@
           justify-content center
           align-items center
           .head
-            color $basewhitecolor
+            color getcolor( "accent", "dark", "color" )
             font-size 2rem
   .flickity-prev-next-button
     +breakpoint(sm)
@@ -89,8 +89,8 @@
         .head
           absolute bottom left right
           z-index 1
-          background-color rgba( $_base_black, .75 )
-          color $_base_white
+          background-color rgba( getcolor( "base", "dark", "bgcolor" ), .75 )
+          color getcolor( "base", "dark", "color" )
           padding 4px 8px
           font-size 1.4rem
           text-align center
@@ -98,15 +98,15 @@
 /* news */
 .section-news
   .section-head
-    color $_base_white
+    background-color getcolor( "brand", "dark", "bgcolor" )
+    color getcolor( "brand", "dark", "color" )
     font-size 1.6rem
-    background-color $sectioncolor
     overflow hidden
     border-radius 1.4rem
     & >.fa
       display: inline-block
-      background-color: $_base_white
-      color $sectioncolor
+      background-color: getcolor( "brand", "dark", "color" )
+      color getcolor( "brand", "dark", "bgcolor" )
       font-size 1.4rem
       line-height 1.6rem
       width 1.6rem
@@ -126,6 +126,7 @@
         flex-wrap nowrap
         justify-content space-between
         align-items flex-end
+        font-weight 900
         time
           font-size 1rem
           font-weight normal
