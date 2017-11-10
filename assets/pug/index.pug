@@ -8,12 +8,12 @@ block topslider
     div.topslider#topslider
       ul.slidefixed.shareSnsTop
         li
-          a.shareSnsTop-button( href = tw_href )
+          a.shareSnsTop-button( href != tw_href )
             span.fa.fa-twitter
             span.sr-only
               | twitter
         li
-          a.shareSnsTop-button( onclick = fb_onclick, href = fb_href )
+          a.shareSnsTop-button( onclick != fb_onclick, href != fb_href )
             span.fa.fa-facebook
             span.sr-only
               | facebook

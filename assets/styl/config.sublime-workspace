@@ -1,0 +1,484 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"A",
+				"accentcolor"
+			],
+			[
+				"r",
+				"reservecolor"
+			],
+			[
+				"_",
+				"_variable.styl"
+			],
+			[
+				"b",
+				"bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "module/_sprite.styl",
+			"settings":
+			{
+				"buffer_size": 12,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.styl",
+			"settings":
+			{
+				"buffer_size": 3171,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "common.styl",
+			"settings":
+			{
+				"buffer_size": 2108,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/*\n * index\n */\n/* top slider */\n.topslider {\n  position: relative;\n  width: 100%;\n}\n.topslider .slidefixed {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  z-index: 3;\n}\n.topslider .slidefixed li {\n  display: inline-block;\n}\n.topslider .slide-list {\n  width: 100%;\n}\n.topslider .slide-list .gallery-cell {\n  width: 100%;\n}\n.topslider .slide-list .gallery-cell > a {\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 100%;\n}\n.topslider .slide-list .gallery-cell > a img {\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 1;\n}\n.topslider .slide-list .gallery-cell > a .gallery-cell-content {\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 2;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: box;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -o-box-orient: vertical;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-lines: single;\n  -moz-box-lines: single;\n  -o-box-lines: single;\n  -ms-flex-wrap: nowrap;\n  flex-wrap: nowrap;\n  -webkit-box-pack: center;\n  -o-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -o-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n}\n.topslider .slide-list .gallery-cell > a .gallery-cell-content .head {\n  color: #fff;\n  font-size: 32px;\n  font-size: 2rem;\n}\n@media only screen and (max-width: 767px) {\n  .topslider .flickity-prev-next-button {\n    width: 22px;\n    height: 22px;\n  }\n}\n.topslider .flickity-page-dots {\n  bottom: 4px;\n}\n.topslider .flickity-page-dots .dot {\n  background-color: rgba(255,255,255,0.667);\n  width: 30px;\n  border-radius: 5px;\n  margin: 0 4px;\n  opacity: 1;\n  -ms-filter: none;\n  -webkit-filter: none;\n          filter: none;\n}\n.topslider .flickity-page-dots .dot.is-selected {\n  background-color: rgba(0,0,0,0.667);\n}\n.shareSnsTop-button {\n  display: block;\n}\n.shareSnsTop-button .fa {\n  font-size: 32px;\n  font-size: 2rem;\n  padding: 3px;\n  width: 1.3em;\n  height: 1.3em;\n  text-align: center;\n  display: block;\n  border-radius: 0.65em;\n  overflow: hidden;\n  opacity: 0.75;\n  -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)\";\n  filter: alpha(opacity=75);\n}\n.shareSnsTop-button .fa:hover {\n  opacity: 1;\n  -ms-filter: none;\n  -webkit-filter: none;\n          filter: none;\n}\n/* banner */\n.aside-banner .banner-item {\n  display: block;\n  margin: 10px 10px 0;\n}\n.aside-banner .banner-item > a {\n  display: block;\n  overflow: hidden;\n  border-radius: 10px;\n  position: relative;\n}\n.aside-banner .banner-item > a > img {\n  display: block;\n  width: 100%;\n  height: auto;\n}\n.aside-banner .banner-item > a .head {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1;\n  background-color: rgba(51,51,51,0.75);\n  color: #fff;\n  padding: 4px 8px;\n  font-size: 22.4px;\n  font-size: 1.4rem;\n  text-align: center;\n}\n/* news */\n.section-news .section-head {\n  background-color: #ee6500;\n  color: #fff;\n  font-size: 25.6px;\n  font-size: 1.6rem;\n  overflow: hidden;\n  border-radius: 1.4rem;\n}\n.section-news .section-head >.fa {\n  display: inline-block;\n  background-color: #fff;\n  color: #ee6500;\n  font-size: 22.4px;\n  font-size: 1.4rem;\n  line-height: 25.6px;\n  line-height: 1.6rem;\n  width: 25.6px;\n  width: 1.6rem;\n  border-radius: 0.8rem;\n  text-align: center;\n  margin: 9.6px;\n  margin: 0.6rem;\n  vertical-align: 1.6px;\n  vertical-align: 0.1rem;\n}\n.section-news .news {\n  margin: 10px;\n}\n.section-news .news-item-head {\n  font-size: 25.6px;\n  font-size: 1.6rem;\n  font-weight: bold;\n  border-bottom: 1px solid #000;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -o-box-orient: horizontal;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -webkit-box-lines: single;\n  -moz-box-lines: single;\n  -o-box-lines: single;\n  -ms-flex-wrap: nowrap;\n  flex-wrap: nowrap;\n  -webkit-box-pack: justify;\n  -o-box-pack: justify;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  -webkit-box-align: end;\n  -o-box-align: end;\n  -ms-flex-align: end;\n  align-items: flex-end;\n  font-weight: 900;\n}\n.section-news .news-item-head time {\n  font-size: 16px;\n  font-size: 1rem;\n  font-weight: normal;\n}\n.section-news .news-item + .news-item {\n  margin-top: 5px;\n}\n.section-news .news-item:not(:first-child) {\n  margin-top: 10px;\n}\n.section-news .news-item-detail {\n  padding: 0 5px;\n  font-size: 19.2px;\n  font-size: 1.2rem;\n}\n.section-news .news-item-detail p {\n  padding-top: 5px;\n  line-height: 1.4;\n}\n",
+			"file": "/D/Users/UU066897/Documents/mytemp/dist/css/index.css",
+			"file_size": 4637,
+			"file_write_time": 131547765738193360,
+			"settings":
+			{
+				"buffer_size": 4637,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Stylus/Stylus.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Stylus/Stylus.sublime-build",
+					""
+				],
+				[
+					"Packages/Stylus/Stylus.sublime-build",
+					"compress"
+				]
+			],
+			[
+				"Packages/Stylus/Stylus.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"sty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"pug",
+				"Set Syntax: Pug"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 452.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Users/UU066897/Documents/mytemp",
+		"/D/Users/UU066897/Documents/mytemp/assets",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl"
+	],
+	"file_history":
+	[
+		"/D/Users/UU066897/Documents/mytemp/config.sublime-project",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/config.sublime-project",
+		"/D/Users/UU066897/Documents/mytemp/readme.md",
+		"/D/Users/UU066897/Documents/mytemp/assets/js/index.es6",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/index.styl",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/common.styl",
+		"/D/Users/UU066897/Documents/mytemp/dist/css/common.css",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/module/_reset.styl",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/module/_variable.styl",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/module/_resset_bootstrap.styl",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/concept.styl",
+		"/D/Users/UU066897/Documents/mytemp/assets/data/site.json",
+		"/D/Users/UU066897/Documents/mytemp/assets/pug/index.pug",
+		"/D/Users/UU066897/Documents/mytemp/assets/pug/concept.pug",
+		"/D/Users/UU066897/Documents/mytemp/dist/concept.html",
+		"/D/Users/UU066897/Documents/mytemp/dist/index.html",
+		"/D/Users/UU066897/Documents/mytemp/gulpfile.js",
+		"/D/Users/UU066897/Documents/mytemp/assets/pug/module/_sidemenu.pug",
+		"/D/Users/UU066897/Documents/mytemp/assets/pug/module/_nav.pug",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/module/_base.styl",
+		"/D/Users/UU066897/Documents/mytemp/assets/styl/module/_sprite.styl",
+		"/D/Users/UU066897/Documents/mytemp/dist/js/index.js",
+		"/D/Users/UU066897/Documents/mytemp/assets/pug/module/_footer.pug",
+		"/D/Users/UU066897/Documents/mytemp/assets/pug/module/_layout.pug",
+		"/D/Users/UU066897/Documents/mytemp/assets/data/index.json",
+		"/D/Users/UU066897/Documents/mytemp/assets/css/bootstrap.min.css",
+		"/D/Users/UU066897/Documents/mytemp/assets/js/index.js",
+		"/D/Users/UU066897/Documents/mytemp/assets/pug/module/_mixins.pug",
+		"/D/Users/UU066897/Documents/mytemp/assets/pug/module/_header.pug",
+		"/D/Users/UU066897/Documents/mytemp/package.json",
+		"/D/Users/UU066897/Documents/mytemp/assets/js/jquery-3.2.1.min.js",
+		"/D/Users/UU066897/Documents/mytemp/assets/css/reset.min.css"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\t",
+			"basecolor",
+			"=",
+			"$accentcolor",
+			"#009484",
+			"#ee9a00",
+			"#e60",
+			"#333",
+			"name",
+			" ",
+			"font-family",
+			"\\$",
+			"accent",
+			"_base_",
+			"$subcolor",
+			"      color getcolor( \"accent\", \"dark\", \"color\" )",
+			"$navcolor\n",
+			"333",
+			"$navbgcolor\n",
+			"$navbgcolor",
+			"ee9a00",
+			"$.",
+			"$",
+			" @media only screen and (max-width: 767px)",
+			":",
+			"topInfo",
+			":",
+			"p.d",
+			"div ",
+			":",
+			"that",
+			"proto.",
+			"10",
+			", ",
+			"#BEE1EF",
+			"#fff",
+			"#ffffff",
+			"#94cee4",
+			":",
+			".col-xs",
+			"\\r",
+			":",
+			".navbar-inverse .navbar-nav .open .dropdown-menu",
+			":",
+			"%\n",
+			"//",
+			"\"",
+			"=",
+			"D:\\project\\jot",
+			"\"",
+			"' ",
+			"\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "module/_sprite.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3171,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1957,
+								1957
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 990.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "common.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/Users/UU066897/Documents/mytemp/dist/css/index.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4637,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "config.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 304.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
