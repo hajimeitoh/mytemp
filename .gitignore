@@ -13,3 +13,4 @@ coverage
 .coverage
 package-lock.json
 dist/*
+config.sublime-workspace
