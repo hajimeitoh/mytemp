@@ -30,17 +30,7 @@ block topslider
 block contents
   //- ページ本体
   div.row
-    div.col-sm-4.col-xs-12.contents-side
-      include module/_sidemenu
-      aside.aside.aside-banner
-        ul.banner
-          each item in banner
-            li.banner-item
-              a( href = item.url )
-                img( src = item.imagepath )
-                span.head= item.title
-
-    div.col-sm-8.col-xs-12.contents-main
+    div.col-sm-8.col-xs-12.col-sm-push-4.contents-main
       section.section.section-news
         h2.section-head
           i.fa.fa-info
@@ -54,3 +44,12 @@ block contents
               div.news-item-detail
                 each str in item.detail
                   p= str
+    div.col-sm-4.col-xs-12.col-sm-pull-8.contents-side
+      include module/_sidemenu
+      aside.aside.aside-banner
+        ul.banner
+          each item in banner
+            li.banner-item
+              a( href = item.url )
+                img( src = item.imagepath )
+                span.head= item.title

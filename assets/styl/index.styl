@@ -3,6 +3,11 @@
  */
 @import 'nib'
 @import 'module/_base'
+/* nav bar */
+.navbar
+  +breakpoint(sm)
+    absolute top left right
+    z-index 1000
 /* top slider */
 .topslider
   position relative
@@ -55,6 +60,8 @@
       opacity 1
       &.is-selected
         background-color #000a
+  +breakpoint(sm)
+    margin-top 50px
 .shareSnsTop
   &-button
     display: block
@@ -70,6 +77,7 @@
       opacity .75
       &:hover
         opacity 1
+
 
 /* banner */
 .aside-banner
