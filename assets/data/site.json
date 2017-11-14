@@ -9,44 +9,61 @@
       "year": 2017
     },
     "common_css": [
-      "/css/reset.min.css",
-      "/css/font-awesome.min.css",
+      "/css/lib/reset.min.css",
+      "/css/lib/font-awesome.min.css",
       "https://fonts.googleapis.com/css?family=Lato:400,700,900",
-      "/css/bootstrap.min.css",
+      "/css/lib/bootstrap.min.css",
       "/css/common.css"
     ],
     "common_script": [
-      "/js/jquery-3.2.1.min.js",
-      "/js/bootstrap.min.js",
+      "/js/lib/jquery-3.2.1.min.js",
+      "/js/lib/bootstrap.min.js",
       "/js/common.js"
     ],
     "pages": {
       "index": {
         "title": "ホーム",
+        "position": "main",
         "description": "このページはトップページです。",
         "keywords": "",
         "css": [
-          "/css/flickity.min.css",
+          "/css/lib/flickity.min.css",
           "/css/index.css"
         ],
         "script": [
-          "/js/flickity.min.js",
+          "/js/lib/flickity.min.js",
           "/js/index.js"
         ]
       },
       "concept": {
         "title": "コンセプト",
+        "position": "main",
         "description": "このページはコンセプトページです。",
         "keywords": "",
         "css": [
           "/css/concept.css"
+        ]
+      },
+      "access": {
+        "title": "アクセス",
+        "position": "sub",
+        "description": "このページはアクセスページです。",
+        "keywords": "",
+        "css": [
+          "/css/access.css"
+        ],
+        "script": [
+          "/js/lib/gmaps.js",
+          "https://maps.google.com/maps/api/js?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "/data/access.json",
+          "/js/access.js"
         ]
       }
     }
   },
   "info": {
     "tel": "04512345678",
-    "email": "abc.edf.com",
+    "email": "abc@edf.com",
     "address": "○○○市□□□区×××町1-2-3"
   },
   "fb": {

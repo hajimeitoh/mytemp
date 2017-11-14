@@ -16,6 +16,7 @@ class pageview{
 
   setEl() {
     this.$topslider = $('#topslider');
+    this.$sidebanner = $('#sidebanner');
     return this;
   };
 
@@ -23,6 +24,7 @@ class pageview{
     let
       that = this;
     that.sliderSet();
+    that.bannerSet();
     return this;
   };
 
@@ -46,16 +48,40 @@ class pageview{
       resize: true,
       autoPlay: 6000
     });
+    return this;
+  };
+
+  bannerSet() {
+    let
+      that = this,
+      $banner = this.$sidebanner,
+      $window = $(window),
+      ww,
+      bannerSlideActive = false,
+      bannerSlideOption = {
+        cellSelector: '.banner-item',
+        adaptiveHeight: true,
+        cellAlign: 'center',
+        contain: true,
+        wrapAround: true,
+        imagesLoaded: true,
+        draggable: true,
+        prevNextButtons: false,
+        pageDots: false,
+        accessibility: true,
+        resize: true,
+        autoPlay: 6000
+      };
     $(window).on('resize', () => {
-      let
-        ww = that.$topslider.width(),
-        wh = ww / slideRatio,
-        tw = ww * slideWidthPer;
-      that.$topslider.css('height', wh + 'px');
-      that.$topslider.find('.gallery-cell').css({
-        'width': tw + 'px',
-        'height': wh + 'px'
-      });
+      ww = $(window).width();
+      if( ww > 768 && bannerSlideActive ){
+        $banner.flickity('destroy');
+        bannerSlideActive = false;
+      } else if ( ww <= 768 && !bannerSlideActive ){
+        $banner.flickity(bannerSlideOption)
+        //let bannerSlide = new Flickity( $banner, bannerSlideOption );
+        bannerSlideActive = true;
+      }
     }).resize();
 
     return this;

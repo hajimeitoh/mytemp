@@ -11,7 +11,11 @@
 /* top slider */
 .topslider
   position relative
+  overflow hidden
   width 100%
+  height 200px
+  +breakpoint(md)
+    height 120px
   .slidefixed
     absolute top 10px right 10px
     z-index 3
@@ -20,7 +24,10 @@
   .slide-list
     width 100%
     .gallery-cell
-      width 100%
+      width @width
+      height 200px
+      +breakpoint(md)
+        height 120px
       & > a
         position relative
         display block
@@ -28,9 +35,6 @@
         height 100%
         img
           display block
-          absolute top left bottom right
-          width 100%
-          height 100%
           z-index 1
         .gallery-cell-content
           display block
@@ -46,6 +50,15 @@
           .head
             color getcolor( "accent", "dark", "color" )
             font-size 2rem
+            text-shadow 0 0 2px $black, 0 0 2px $black
+      background-size cover
+      background-position 50% 50%
+      &#slide01
+        background-image: url(/img/index/img_slide01.jpg)
+      &#slide02
+        background-image: url(/img/index/img_slide02.jpg)
+      &#slide03
+        background-image: url(/img/index/img_slide03.jpg)
   .flickity-prev-next-button
     +breakpoint(sm)
       width 22px
@@ -90,6 +103,7 @@
         overflow hidden
         border-radius 10px
         position relative
+        height 100%
         & > img
           display block
           width 100%
@@ -102,6 +116,20 @@
           padding 4px 8px
           font-size 1.4rem
           text-align center
+    &.flickity-enabled
+      width 100%
+      height 180px
+      .banner-item
+        width 100%
+        height 180px
+        margin 0
+        & > a
+          border-radius 0
+          & > img
+            height 180px
+            width 100%
+            object-fit cover
+            object-position center center
 
 /* news */
 .section-news
@@ -122,6 +150,8 @@
       text-align center
       margin .6rem
       vertical-align: .1rem
+    +breakpoint(sm)
+      border-radius 0
   .news
     margin 10px
     &-item

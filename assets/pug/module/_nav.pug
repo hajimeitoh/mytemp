@@ -11,13 +11,19 @@ nav.navbar.navbar-inverse
     div.collapse.navbar-collapse#global-nav
       ul.nav.navbar-nav
         each val, key in site.pages
-          - if( key === pageid )
-            li.active
-              a(href = key + '.html') !{val.title}
-          - else
-            li
-              a(href = key + '.html') !{val.title}
+          - if( val.position === 'main' )
+            - if( key === pageid )
+              li.active
+                a(href = key + '.html') !{val.title}
+            - else
+              li
+                a(href = key + '.html') !{val.title}
       ul.nav.navbar-nav.navbar-right
-        li
-          a( href = '#')
-            | お問い合わせ
+        each val, key in site.pages
+          - if( val.position === 'sub' )
+            - if( key === pageid )
+              li.active
+                a(href = key + '.html') !{val.title}
+            - else
+              li
+                a(href = key + '.html') !{val.title}

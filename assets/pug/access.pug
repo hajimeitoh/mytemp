@@ -1,0 +1,21 @@
+extends module/_layout
+
+block vars
+  //- ページid
+  - var pageid = 'access'
+
+block contents
+  //- ページ本体
+  div.row
+    div.col-sm-4.col-xs-12.contents-side
+      div.affix-top#afNav
+        include module/_sidemenu
+    div.col-sm-8.col-xs-12.contents-main
+      section.section.section-map
+        h1.section-head
+          i.glyphicon.glyphicon-map-marker
+          | ACCESS MAP
+        div.body
+          div.mapwrap
+            div#map-detail
+
